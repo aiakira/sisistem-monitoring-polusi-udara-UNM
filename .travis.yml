@@ -1,0 +1,14 @@
+language: node_js
+git:
+  depth: 3
+node_js:
+  - "lts/*"
+install: npm ci
+script:
+  - npm run test
+  - npm run build
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
